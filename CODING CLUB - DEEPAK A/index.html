@@ -1,0 +1,59 @@
+<html>
+    <head>
+        <title> Registration form</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        
+        <div class="video-background">
+            <video autoplay muted loop>
+                <source src="background.mp4" type="video/mp4">
+                Your browser does not support HTML5 video.
+            </video>
+        </div>
+    <form id="registrationForm">
+        <h2 style="color: #7f4df3; text-align: center;">STUDENT REGISTRATION FORM</h2>
+        <label>First Name</label>
+        <input type="text" required>
+
+        <label>Phone No</label>
+        <input type="text" required>
+
+        <label>Email</label>
+        <input type="email" required>
+
+        <label for="courses">Choose a course:</label>
+        <div class="dropdown">
+            <input type="text" placeholder="Search courses..." id="dropdownInput" onkeyup="filterFunction()" required>
+            <div id="dropdownList" class="dropdown-content">
+                <div class="dropdown-item">CSE</div>
+                <div class="dropdown-item">CSBS</div>
+                <div class="dropdown-item">CSD</div>
+                <div class="dropdown-item">ECE</div>
+                <div class="dropdown-item">EEE</div>
+                <div class="dropdown-item">MECH</div>
+            </div>
+        </div>
+
+        <label>Year</label>
+        <div class="radio-group">
+            <input type="radio" name="year" value="1" required>1
+            <input type="radio" name="year" value="2">2
+            <input type="radio" name="year" value="3">3
+            <input type="radio" name="year" value="4">4
+        </div>
+
+        <label>College Name</label>
+        <input type="text" required>
+
+        <input type="submit" value="Register">
+    </form>
+    <div id="successMessage" style="display: none; text-align: center;">
+        <h2>🎉 Registration Successful! 🎉</h2>
+        <p>Thank you for registering! Please check your email for further instructions.</p>
+        <div id="redirectMessage">Redirecting you to SkillRack... Please complete the problems there!</div>
+    </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
